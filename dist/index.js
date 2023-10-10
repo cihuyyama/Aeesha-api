@@ -14,6 +14,9 @@ app.use((0, cors_1.default)({
     origin: '*'
 }));
 app.use(routes_1.default);
+app.get('/', (_, res) => {
+    res.send("App is running");
+});
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
